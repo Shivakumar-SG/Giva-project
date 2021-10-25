@@ -1,10 +1,29 @@
+<style>
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        font-size: 16px;
+    }
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    input {
+        
+    }
+</style>
+
 <div class="row">
     <div class="col-md-5">
         <form [formGroup]="this.customerService.form" (ngSubmit)="onSubmit()">
             <input type="hidden" formControlName="$key">
             <div class="form-group">
                 <label>Full Name </label>
-                <input formControlName="fullName" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.fullName.errors}">
+                <input type="text" placeholder="Enter Full Name" formControlName="fullName" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.fullName.errors}">
                 <div class="invalid-feedback" *ngIf="submitted && formControls.fullName.errors">
                     This feild is required.
                 </div>
@@ -23,15 +42,12 @@
                 <label>Disabled </label>
                 <input formControlName="disabled" class="form-control">
             </div>
-            <div>
-                <input type="submit" class="btn btn-primary" value="Submit">
+            <div style="margin: 10px;">
+                <input type="submit" mat-raised-button color="warn" value="Add Record to Database">
             </div>
         </form>
-        <div class="alert alert-info" *ngIf="showSuccessMessage">
+        <div class="alert alert-info" *ngIf="showSuccessMessage" style="color: red;">
             Submitted Successfully.
         </div>
-    </div>
-    <div class="col-md-7">
-        <app-customer-list></app-customer-list>
     </div>
 </div>

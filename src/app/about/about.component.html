@@ -1,0 +1,25 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Hello There!</h1>
+  <mat-grid-list cols="2" rowHeight="250px">
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <h3>
+            
+            I'm Shivakumar, studying computer science and engineering at MS Ramaiah University of Applied Science.
+              I'm a passionate coder who loves to scratch his head while surfing over StackOverflow ;-)
+              <br>
+            I'm a quick learner and am good at Problem Solving, Web App and Mobile App development. I also posses a good amount of cummunication skills and can do well even in compulsive conditions.
+            <br>
+            Outside of coding life, I love to spend my time with playing games, watching movies and shows, reading interesting books and browsing Reddit.
+          </h3>
+          <h3>Thank you for this opportunity!</h3>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

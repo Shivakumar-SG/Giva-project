@@ -22,6 +22,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerService } from "./shared/customer.service";
 import { environment } from "../environments/environment";
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { environment } from "../environments/environment";
     NavComponent,
     HomeComponent,
     CustomerComponent,
-    CustomerListComponent
+    CustomerListComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
