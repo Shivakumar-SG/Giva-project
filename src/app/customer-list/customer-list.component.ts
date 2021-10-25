@@ -9,8 +9,9 @@ import { CustomerService } from "../shared/customer.service";
 })
 export class CustomerListComponent implements OnInit {
 
-  constructor(private customerService: CustomerService) { }
+  constructor(public customerService: CustomerService) { }
   customerArray = [];
+  showDeletedMessage: boolean;
 
   ngOnInit() {
     this.customerService.getCustomers().subscribe(
@@ -22,5 +23,13 @@ export class CustomerListComponent implements OnInit {
           };
         });
       });
+  }
+
+  onDelete($key){
+    if (confirm('Are you sure to delete this record ?')){
+      this.customerService.deleteCustomer($key);
+      this.showDeletedMessage = true;
+      setTimeout(() => this.showDeletedMessage = false, 1000);
+    }
   }
 }

@@ -31,4 +31,21 @@ export class CustomerService {
       disabled: customer.disabled
     });
   }
+
+  populateForm(customer) {
+    this.form.setValue(customer);
+  }
+
+  updateCustomer(customer){
+    this.cutomerList.update(customer.$key, {
+      fullName: customer.fullName,
+      email: customer.email,
+      roles: customer.roles,
+      disabled: customer.disabled
+    });
+  }
+
+  deleteCustomer($key: string) {
+    this.cutomerList.remove($key);
+  }
 }
