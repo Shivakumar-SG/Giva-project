@@ -10,8 +10,8 @@ import { CustomerService } from "../shared/customer.service";
 export class CustomerComponent implements OnInit {
 
   constructor(public customerService: CustomerService) { }
-  submitted!: boolean;
-  showSuccessMessage!: boolean;
+  submitted: boolean;
+  showSuccessMessage: boolean;
   formControls = this.customerService.form.controls;
 
   ngOnInit(): void{
