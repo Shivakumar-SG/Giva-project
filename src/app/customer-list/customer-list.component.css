@@ -22,3 +22,22 @@
     tr:nth-child(even) {
         background-color: #dddddd;
     }
+
+    button.but1 {
+        border: 2px;
+        
+        font-weight: bold;
+        border-color: blue;
+        background-color: rgb(69, 163, 69);
+        border-radius: 5px;
+    }
+
+    button.but2 {
+        border: 1px;
+        border-color: black;
+        font-weight: bold;
+        border-color: blue;
+        background-color: rgb(233, 64, 64);
+        border-radius: 5px;
+    }
+    

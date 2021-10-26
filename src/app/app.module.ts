@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AngularFireModule } from "angularfire2";
 import { AngularFireDatabaseModule } from "angularfire2/database";
+
+import {Component} from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +25,7 @@ import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerService } from "./shared/customer.service";
 import { environment } from "../environments/environment";
 import { AboutComponent } from './about/about.component';
+import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 
 @NgModule({
   declarations: [
@@ -31,10 +34,11 @@ import { AboutComponent } from './about/about.component';
     HomeComponent,
     CustomerComponent,
     CustomerListComponent,
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
@@ -48,7 +52,8 @@ import { AboutComponent } from './about/about.component';
     MatMenuModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    MatSlideToggleModule
   ],
   providers: [CustomerService],
   bootstrap: [AppComponent]

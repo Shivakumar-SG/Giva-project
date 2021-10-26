@@ -29,3 +29,26 @@ $GIVA-theme: mat.define-light-theme((
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($GIVA-theme);
+
+//for dark theme
+
+$dark-primary: mat.define-palette(mat.$pink-palette);
+$dark-accent: mat.define-palette(mat.$blue-gray-palette);
+// $dark-theme: mat.define-dark-theme((
+//  color: (
+//    primary: $dark-primary,
+//    accent: $dark-accent,
+//  )
+// ));
+
+$GIVA-dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-primary,
+    accent: $dark-accent,
+  )
+));
+
+.dark-theme-mode {
+  @include mat.core-theme($GIVA-dark-theme);
+  //@include mat.button-theme($dark-theme);
+}

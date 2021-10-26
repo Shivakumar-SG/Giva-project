@@ -14,8 +14,8 @@
             <td>{{customer.roles}}</td>
             <td>{{customer.disabled}}</td>
             <td>
-                <button (click)="customerService.populateForm(customer)">Edit</button>
-                <button (click)="onDelete(customer.$key)">Delete</button>
+                <button class="but1" (click)="customerService.populateForm(customer)">Edit</button>
+                <button class="but2" (click)="onDelete(customer.$key)">Delete</button>
             </td>
         </tr>
     </ng-container>
